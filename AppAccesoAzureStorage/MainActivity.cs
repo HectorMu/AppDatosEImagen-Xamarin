@@ -60,7 +60,7 @@ namespace AppDatosEImagen
             {
                 try
                 {
-                    var CuentaDeAlmacenamiento = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=datosdeclasehector;AccountKey=wZzgCiEz9toV1TrTao/7ol5OuScYJNBwoGsVqPct0zjdq3pNhBI68kOLk/3Tx/BXuJr0q/9Wa3u4jhJ3SEeYVQ==;EndpointSuffix=core.windows.net");
+                    var CuentaDeAlmacenamiento = CloudStorageAccount.Parse("");
                     var clienteBlob = CuentaDeAlmacenamiento.CreateCloudBlobClient();
                     var Carpeta = clienteBlob.GetContainerReference("imagenes");
                     var resourceBlob = Carpeta.GetBlockBlobReference(txtNombre.Text + ".jpg");
